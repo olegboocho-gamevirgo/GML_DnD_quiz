@@ -3,8 +3,9 @@
   "resourceVersion": "1.6",
   "name": "DnD_quize",
   "resources": [
-    {"id":{"name":"obj_pause_menu","path":"objects/obj_pause_menu/obj_pause_menu.yy",},"order":1,},
     {"id":{"name":"AdobeColor_My_Color_Theme","path":"sprites/AdobeColor_My_Color_Theme/AdobeColor_My_Color_Theme.yy",},"order":2,},
+    {"id":{"name":"small_button7","path":"sprites/small_button7/small_button7.yy",},"order":7,},
+    {"id":{"name":"Obj_geek","path":"objects/Obj_geek/Obj_geek.yy",},"order":10,},
     {"id":{"name":"Obj_class_choise","path":"objects/Obj_class_choise/Obj_class_choise.yy",},"order":5,},
     {"id":{"name":"Room_ClassSkill","path":"rooms/Room_ClassSkill/Room_ClassSkill.yy",},"order":1,},
     {"id":{"name":"Obj_quiz_spell","path":"objects/Obj_quiz_spell/Obj_quiz_spell.yy",},"order":7,},
@@ -13,7 +14,6 @@
     {"id":{"name":"UI_Script","path":"scripts/UI_Script/UI_Script.yy",},"order":0,},
     {"id":{"name":"Room_monsters","path":"rooms/Room_monsters/Room_monsters.yy",},"order":3,},
     {"id":{"name":"Spr_menu_puzle","path":"sprites/Spr_menu_puzle/Spr_menu_puzle.yy",},"order":1,},
-    {"id":{"name":"Obj_Api_worker","path":"objects/Obj_Api_worker/Obj_Api_worker.yy",},"order":0,},
     {"id":{"name":"pngegg","path":"sprites/pngegg/pngegg.yy",},"order":5,},
     {"id":{"name":"Room_Spell","path":"rooms/Room_Spell/Room_Spell.yy",},"order":2,},
     {"id":{"name":"get_string_class","path":"scripts/get_string_class/get_string_class.yy",},"order":1,},

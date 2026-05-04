@@ -31,9 +31,11 @@ function get_answer(class_answer){
 		if ( string_lower(answer) == string_lower(class_answer)){
 			result = "Сorrectly. "+quetion_type+" "+truly
 			res_col = corect_color
+			Obj_geek.add_ans(true)
 		}else{
 			result = "Wrong. "+quetion_type+" "+truly
 			res_col = wrong_color
+			Obj_geek.add_ans(false)
 		}
 	}
 }

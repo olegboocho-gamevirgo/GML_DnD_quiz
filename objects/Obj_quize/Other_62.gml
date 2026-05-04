@@ -13,7 +13,7 @@ if (ds_map_find_value(async_load, "id") == request){
 			count = variable_struct_get(data, "count")
 			
 			if(array_length(results_array)=0){
-				start()
+				alarm[1]=5
 				return;
 			}
 			
@@ -21,12 +21,14 @@ if (ds_map_find_value(async_load, "id") == request){
 				
 				if(variable_struct_get(results_array[0],"name")= "Ability Score Improvement"){
 					
-					start()
+					alarm[1]=5
 					return;
 					
 				}
 			}
 			
+			second_question = "Level "+string(lvl)
+			inumer=0
 			get_question()
 		}
 	}
