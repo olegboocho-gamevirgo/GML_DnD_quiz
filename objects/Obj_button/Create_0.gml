@@ -20,7 +20,7 @@ function swiching(){
 			
 			case "Next":
 			if(Obj_quize.result = ""){
-				Obj_geek.add_ans(false)
+				Obj_top.add_ans(false)
 			}
 			
 			if(room = Room_ClassSkill){

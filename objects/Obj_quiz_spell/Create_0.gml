@@ -5,13 +5,13 @@ truly = ""
 
 // Inherit the parent event
 event_inherited();
-
-url = "https://www.dnd5eapi.co/api/2014/spells"
-second_question = "in progress"
-main_question = "Is this statement true?"
-request = http_request(url, "GET", headers, payload);
-show_debug_message(url)
-
+function start(){
+	url = "https://www.dnd5eapi.co/api/2014/spells"
+	second_question = "in progress"
+	main_question = "Is this statement true?"
+	request = http_request(url, "GET", headers, payload);
+	show_debug_message(url)
+}
 
 function get_question(){
 	result = ""
@@ -29,13 +29,13 @@ function get_question(){
 function get_answer(class_answer){
 	if(result = ""){
 		if ( string_lower(answer) == string_lower(class_answer)){
-			result = "Сorrectly. "+quetion_type+" "+truly
+			result = "Correctly.\n"+quetion_type+" "+truly
 			res_col = corect_color
-			Obj_geek.add_ans(true)
+			Obj_top.add_ans(true)
 		}else{
-			result = "Wrong. "+quetion_type+" "+truly
+			result = "Wrong.\n"+quetion_type+" "+truly
 			res_col = wrong_color
-			Obj_geek.add_ans(false)
+			Obj_top.add_ans(false)
 		}
 	}
 }

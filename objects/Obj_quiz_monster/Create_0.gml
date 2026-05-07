@@ -6,11 +6,13 @@ truly = ""
 // Inherit the parent event
 event_inherited();
 
-url = "https://www.dnd5eapi.co/api/2014/monsters"
-second_question = "in progress"
-main_question = "Who is this monster?"
-request = http_request(url, "GET", headers, payload);
-show_debug_message(url)
+function start(){
+	url = "https://www.dnd5eapi.co/api/2014/monsters"
+	second_question = "in progress"
+	main_question = "Who is this monster?"
+	request = http_request(url, "GET", headers, payload);
+	show_debug_message(url)
+}
 
 function get_question(){
 	randomize()
@@ -31,13 +33,13 @@ function get_question(){
 function get_answer(class_answer){
 	if(result = ""){
 		if ( string_lower(answer) == string_lower(class_answer)){
-			result = "Сorrectly. "+answer
+			result = "Correctly.\n"+answer
 			res_col = corect_color
-			Obj_geek.add_ans(true)
+			Obj_top.add_ans(true)
 		}else{
-			result = "Wrong. "+answer
+			result = "Wrong.\n"+answer
 			res_col = wrong_color
-			Obj_geek.add_ans(false)
+			Obj_top.add_ans(false)
 		}
 	}
 }
@@ -46,8 +48,8 @@ function set_answer(data){
 	
 	for(var i = 0;i < array_length(monsters);i++){		
 		
-		inst_id = instance_find(Obj_class_choise,i)
-		inst_id.set_text(variable_struct_get(monsters[i],"name") )
+		inst_id = instance_find(Obj_Y_N_choise,i)
+		inst_id.set_text(variable_struct_get(monsters[i],"name") ,false)
 	}
 	
 	second_question = ""
@@ -56,16 +58,16 @@ function set_answer(data){
 			
 	for(var i = 0; i < array_length(desc); i++){
 		
-		second_question +="\n"+variable_struct_get(desc[i],"name")
-		second_question +="\n"+variable_struct_get(desc[i],"desc")
+		second_question +=variable_struct_get(desc[i],"name")+"\n"
+		second_question +=variable_struct_get(desc[i],"desc")+"\n"
 	}
 	
 	var desc = variable_struct_get(data, "special_abilities")
 			second_question += "\n"
 	for(var i = 0; i < array_length(desc); i++){
 		
-		second_question +="\n"+variable_struct_get(desc[i],"name")
-		second_question +="\n"+variable_struct_get(desc[i],"desc")
+		second_question +=variable_struct_get(desc[i],"name")+"\n"
+		second_question +=variable_struct_get(desc[i],"desc")+"\n"
 	}
 	
 	
@@ -78,11 +80,12 @@ function set_answer(data){
 				
 	second_question = string_replace_all(second_question,string_lower(answer), "monster");	
 	
-	var words = split_by_dash(answer);
+	var words = split_text(answer);
 
 	for (var i = 0; i < array_length(words); i++) {
 	    var w = words[i];
-	    
+	    show_debug_message(w)
 	    second_question = string_replace_all(second_question, w, "monster");
+	    second_question = string_replace_all(second_question, string_lower(w), "monster");
 	}
 }

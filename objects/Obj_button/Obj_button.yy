@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "Obj_button",
   "spriteId": {
-    "name": "Spr_button",
-    "path": "sprites/Spr_button/Spr_button.yy",
+    "name": "Spr_button2",
+    "path": "sprites/Spr_button2/Spr_button2.yy",
   },
   "solid": false,
   "visible": true,

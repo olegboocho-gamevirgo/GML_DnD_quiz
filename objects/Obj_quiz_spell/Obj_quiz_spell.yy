@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "Obj_quiz_spell",
   "spriteId": {
-    "name": "Spr_button",
-    "path": "sprites/Spr_button/Spr_button.yy",
+    "name": "Spr_quize",
+    "path": "sprites/Spr_quize/Spr_quize.yy",
   },
   "solid": false,
   "visible": true,
@@ -29,7 +29,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":1,"eventType":2,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

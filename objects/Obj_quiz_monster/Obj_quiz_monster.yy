@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "Obj_quiz_monster",
   "spriteId": {
-    "name": "Spr_button",
-    "path": "sprites/Spr_button/Spr_button.yy",
+    "name": "Spr_quize",
+    "path": "sprites/Spr_quize/Spr_quize.yy",
   },
   "solid": false,
   "visible": true,

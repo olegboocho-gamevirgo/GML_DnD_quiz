@@ -3,20 +3,22 @@
 
 main_question = "What class are we talking about raising the level of?"
 second_question = "in progress"
-text_X = x - (sprite_width/2)+32
-text_Y = y - (sprite_height/2)+16
-text_interwal = 55
+text_X = x - (sprite_width/2)+150
+text_Y = y - (sprite_height/2)+100
+text_interwal = 78
 request2 = noone
 payload = {}
 headers = {  "Accept": "application/json" }
 answer = noone
 result = ""
 res_col = #167B1F
-surf = surface_create(sprite_width-64, sprite_height-96);
+ttext_h = sprite_height-335
+ttext_w =sprite_width-300 
+surf = surface_create( ttext_w, ttext_h);
 wheel = 0
 touch_prev_y = 0;
-corect_color =  #167B1F
-wrong_color = #960D0D
+corect_color =  [ #167B1F, #167B1F, #0D4C11, #0D4C11]
+wrong_color =	[ #960D0D, #960D0D, #4C0606, #4C0606]
 results_array = []
 inumer = 0
 lvl = 0
@@ -34,7 +36,8 @@ function start(){
 	result = ""
 }
 
-start()
+alarm[1] = 3
+//start()
 
 function get_question(){
 	
@@ -52,13 +55,13 @@ function get_question(){
 function get_answer(class_answer){
 	if(result = ""){
 		if ( string_lower(answer) == string_lower(class_answer)){
-			result = "Сorrectly. It is "+ answer
+			result = "Correctly.\nIt is "+ answer
 			res_col = corect_color
-			Obj_geek.add_ans(true)
+			Obj_top.add_ans(true)
 		}else{
-			result = "Wrong. It is "+ answer
+			result = "Wrong.\nIt is "+ answer
 			res_col = wrong_color 
-			Obj_geek.add_ans(false)
+			Obj_top.add_ans(false)
 		}
 	}
 }
@@ -78,9 +81,11 @@ function set_answer(data){
 	}
 	wheel = 0
 	
-	second_question += "\n"+ string_replace_all(temp_question, answer, "[cass name]");
-	get_question()
+	if(!is_undefined(answer)){
+		second_question += "\n"+ string_replace_all(temp_question, answer, "[cass name]");
+	}
 	
+	get_question()
 }
 
 

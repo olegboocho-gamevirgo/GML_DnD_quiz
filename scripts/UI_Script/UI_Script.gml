@@ -77,7 +77,7 @@ function fun_button_draw(buttons, _X=0, _Y=0, _wheel = 0) {
 			}
 		
 			draw_set_color(coll);
-			draw_set_font(Font1)
+			draw_set_font(Font_big_buton)
 			draw_text(_X, addY, buttons[i].b_text);
 		
 	}

@@ -1,7 +1,7 @@
 /// @description Вставьте описание здесь
 // Вы можете записать свой код в этом редакторе
 
-global.color_text = #231C3B
+global.color_text = #020304 //#231C3B
 
 enum CLASS{barbarian,bard,cleric,druid,fighter,monk,paladin,ranger,rogue,sorcerer,warlock,wizard}
 

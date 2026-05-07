@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "Obj_heat",
   "spriteId": {
-    "name": "pngegg6",
-    "path": "sprites/pngegg6/pngegg6.yy",
+    "name": "Spr_top12",
+    "path": "sprites/Spr_top12/Spr_top12.yy",
   },
   "solid": false,
   "visible": true,
